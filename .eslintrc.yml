@@ -17,3 +17,6 @@ settings:
   react:
     version: '16'
 
+rules:
+  indent: warn
+
