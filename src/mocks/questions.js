@@ -1,4 +1,3 @@
-const AVATAR_URL = `https://api.adorable.io/avatars/128`;
 
 export default [
   {
@@ -24,13 +23,13 @@ export default [
       src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
     },
     answers: [{
-      picture: `${AVATAR_URL}/${Math.random()}`,
+      picture: `https://api.adorable.io/avatars/128`,
       artist: `John Snow`,
     }, {
-      picture: `${AVATAR_URL}/${Math.random()}`,
+      picture: `https://api.adorable.io/avatars/129`,
       artist: `Jack Daniels`,
     }, {
-      picture: `${AVATAR_URL}/${Math.random()}`,
+      picture: `https://api.adorable.io/avatars/130`,
       artist: `Jim Beam`,
     }],
   }

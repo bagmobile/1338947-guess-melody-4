@@ -30,32 +30,33 @@ const mock = {
   }
 };
 
-
 const mockEvent = {
   preventDefault() {}
 };
 
+describe(`ArtistQuestionScreen e2e component`, () => {
 
-it(`Click on user answer should pass to the callback data-object from which this answer was created`, () => {
-  const {question} = mock;
-  const onAnswer = jest.fn();
-  const userAnswer = {
-    artist: `one`,
-    picture: `pic-one`,
-  };
+  it(`Click on user answer should pass to the callback data-object from which this answer was created`, () => {
+    const {question} = mock;
+    const onAnswer = jest.fn();
+    const userAnswer = {
+      artist: `one`,
+      picture: `pic-one`,
+    };
 
-  const screen = shallow(<ArtistQuestionScreen
-    onAnswer={onAnswer}
-    question={question}
-  />);
+    const screen = shallow(<ArtistQuestionScreen
+      onAnswer={onAnswer}
+      question={question}
+      renderPlayer={() => {}}
+    />);
 
-  const answerInputs = screen.find(`input`);
-  const answerOne = answerInputs.at(0);
+    const answerInputs = screen.find(`input`);
+    const answerOne = answerInputs.at(0);
 
-  answerOne.simulate(`change`, mockEvent);
+    answerOne.simulate(`change`, mockEvent);
 
-  expect(onAnswer).toHaveBeenCalledTimes(1);
+    expect(onAnswer).toHaveBeenCalledTimes(1);
 
-  expect(onAnswer.mock.calls[0][0]).toMatchObject(question);
-  expect(onAnswer.mock.calls[0][1]).toMatchObject(userAnswer);
+    expect(onAnswer).toHaveBeenCalledWith(question, userAnswer);
+  });
 });
