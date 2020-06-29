@@ -11,7 +11,12 @@ Array [
   <div
     className="track__status"
   >
-    <audio />
+    <audio
+      onCanPlayThrough={[Function]}
+      onPause={[Function]}
+      onPlay={[Function]}
+      onTimeUpdate={[Function]}
+    />
   </div>,
 ]
 `;
