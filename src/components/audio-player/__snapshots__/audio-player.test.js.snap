@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AudioPlayer is rendered correctly 1`] = `
+Array [
+  <button
+    className="track__button track__button--play"
+    disabled={true}
+    onClick={[Function]}
+    type="button"
+  />,
+  <div
+    className="track__status"
+  >
+    <audio
+      onCanPlayThrough={[Function]}
+      onPause={[Function]}
+      onPlay={[Function]}
+      onTimeUpdate={[Function]}
+    />
+  </div>,
+]
+`;
