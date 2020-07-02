@@ -1,7 +1,7 @@
-import React from 'react';
-import Enzyme, {mount} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import withAudioPlayer from './with-audio-player.js';
+import React from "react";
+import Enzyme, {mount} from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+import withAudioPlayer from "./with-audio-player.js";
 
 Enzyme.configure({
   adapter: new Adapter(),

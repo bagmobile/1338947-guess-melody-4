@@ -1,11 +1,11 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import WelcomeScreen from './welcome-screen.jsx';
+import React from "react";
+import renderer from "react-test-renderer";
+import WelcomeScreen from "./welcome-screen.jsx";
 
 it(`Should WelcomeScreen render correctly`, () => {
   const tree = renderer
     .create(<WelcomeScreen
-      errorsCount={3}
+      maxMistakes={3}
       onWelcomeButtonClick={() => {}}
     />)
     .toJSON();
