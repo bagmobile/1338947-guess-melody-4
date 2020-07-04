@@ -5,7 +5,7 @@ import artistQuestion from "./mocks/artist-question.js";
 
 const questions = [genreQuestion, artistQuestion];
 
-const initialState = {
+export const initialState = {
   mistakes: 0,
   maxMistakes: 3,
   step: -1,
