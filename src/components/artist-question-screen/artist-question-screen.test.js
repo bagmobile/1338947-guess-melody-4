@@ -1,7 +1,7 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import ArtistQuestionScreen from './artist-question-screen.jsx';
-import question from '../../mocks/artist-question.js';
+import React from "react";
+import renderer from "react-test-renderer";
+import ArtistQuestionScreen from "./artist-question-screen.jsx";
+import question from "../../mocks/artist-question.js";
 
 
 it(`ArtistQuestionScreen is rendered correctly`, () => {

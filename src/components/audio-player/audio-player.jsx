@@ -1,5 +1,5 @@
-import React, {createRef, Fragment, PureComponent} from 'react';
-import PropTypes from 'prop-types';
+import React, {createRef, Fragment, PureComponent} from "react";
+import PropTypes from "prop-types";
 
 export default class AudioPlayer extends PureComponent {
   constructor(props) {

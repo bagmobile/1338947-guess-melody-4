@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent} from "react";
 import AudioPlayer from "../../components/audio-player/audio-player.jsx";
 
 const withAudioPlayer = (Component) => {

@@ -1,7 +1,7 @@
-import React from 'react';
-import Enzyme, {shallow} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import WelcomeScreen from './welcome-screen';
+import React from "react";
+import Enzyme, {shallow} from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+import WelcomeScreen from "./welcome-screen";
 
 Enzyme.configure({
   adapter: new Adapter(),
@@ -12,7 +12,7 @@ it(`Should welcome button be pressed`, () => {
 
   const welcomeScreen = shallow(
       <WelcomeScreen
-        errorsCount={3}
+        maxMistakes={3}
         onWelcomeButtonClick={onWelcomeButtonClick}
       />
   );
