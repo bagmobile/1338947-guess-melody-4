@@ -1,7 +1,7 @@
-import {extend} from "./utils.js";
-import {GameType} from "./const.js";
-import genreQuestion from "./mocks/genre-question.js";
-import artistQuestion from "./mocks/artist-question.js";
+import {extend} from './utils.js';
+import {GameType} from './const.js';
+import genreQuestion from './mocks/genre-question.js';
+import artistQuestion from './mocks/artist-question.js';
 
 const questions = [genreQuestion, artistQuestion];
 
@@ -15,6 +15,7 @@ export const initialState = {
 const ActionType = {
   INCREMENT_MISTAKES: `INCREMENT_MISTAKES`,
   INCREMENT_STEP: `INCREMENT_STEP`,
+  ANSWER_QUESTION: `ANSWER_QUESTION`
 };
 
 const isArtistAnswerCorrect = (question, userAnswer) => {
@@ -33,7 +34,13 @@ const ActionCreator = {
     payload: 1,
   }),
 
-  incrementMistake: (question, userAnswer) => {
+  incrementMistake: () => {
+    return {
+      type: ActionType.INCREMENT_MISTAKES,
+      payload: 1,
+    };
+  },
+  answerQuestion: (question, userAnswer) => {
     let answerIsCorrect = false;
 
     switch (question.type) {
@@ -44,12 +51,17 @@ const ActionCreator = {
         answerIsCorrect = isGenreAnswerCorrect(question, userAnswer);
         break;
     }
+    return answerIsCorrect
+      ? {
+        type: ActionType.INCREMENT_STEP,
+        payload: 1,
+      }
+      : {
+        type: ActionType.INCREMENT_MISTAKES,
+        payload: 1,
+      };
 
-    return {
-      type: ActionType.INCREMENT_MISTAKES,
-      payload: answerIsCorrect ? 0 : 1,
-    };
-  },
+  }
 };
 
 const reducer = (state = initialState, action) => {
@@ -79,6 +91,5 @@ const reducer = (state = initialState, action) => {
 
   return state;
 };
-
 
 export {reducer, ActionType, ActionCreator};
