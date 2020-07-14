@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withAudio is rendered correctly 1`] = `
+<div>
+  <audio
+    onCanPlayThrough={[Function]}
+    onPause={[Function]}
+    onPlay={[Function]}
+    onTimeUpdate={[Function]}
+  />
+</div>
+`;

@@ -1,8 +1,7 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import GenreQuestionScreen from "./genre-question-screen.jsx";
-import question from "../../mocks/genre-question.js";
-
+import React from 'react';
+import renderer from 'react-test-renderer';
+import GenreQuestionScreen from './genre-question-screen.jsx';
+import question from '../../mocks/genre-question.js';
 
 it(`GenreQuestionScreen is rendered correctly`, () => {
   const tree = renderer.create((
@@ -10,6 +9,8 @@ it(`GenreQuestionScreen is rendered correctly`, () => {
       question={question}
       onAnswer={() => {}}
       renderPlayer={() => {}}
+      onChange={() => {}}
+      userAnswers={[false, false, false, false]}
     />
   ), {
     createNodeMock: () => {

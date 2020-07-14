@@ -1,5 +1,8 @@
-import React, {PureComponent} from "react";
-import AudioPlayer from "../../components/audio-player/audio-player.jsx";
+import React, {PureComponent} from 'react';
+import AudioPlayer from '../../components/audio-player/audio-player.jsx';
+import withAudio from '../with-audio/with-audio';
+
+const WithAudioHOCAudioPlayer = withAudio(AudioPlayer);
 
 const withAudioPlayer = (Component) => {
   class WithAudioPlayer extends PureComponent {
@@ -18,7 +21,7 @@ const withAudioPlayer = (Component) => {
         {...this.props}
         renderPlayer={(src, id) => {
           return (
-            <AudioPlayer
+            <WithAudioHOCAudioPlayer
               src={src}
               isPlaying={id === activePlayerId}
               onPlayButtonClick={() => this.setState({

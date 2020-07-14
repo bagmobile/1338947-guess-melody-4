@@ -72,7 +72,7 @@ describe(`Action creators work correctly`, () => {
       picture: ``,
     })).toEqual({
       type: ActionType.INCREMENT_MISTAKES,
-      payload: 0,
+      payload: 1,
     });
   });
 
@@ -125,7 +125,7 @@ describe(`Action creators work correctly`, () => {
       ]
     }, [false, true, false, false])).toEqual({
       type: ActionType.INCREMENT_MISTAKES,
-      payload: 0,
+      payload: 1,
     });
   });
 
